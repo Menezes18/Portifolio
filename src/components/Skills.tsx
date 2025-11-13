@@ -181,7 +181,7 @@ const Skills = () => {
         style={{ transitionDelay: "800ms" }}
         >
           {[
-            { number: "30+", label: "Projetos" },
+            { number: "20+", label: "Projetos" },
             { number: "5+", label: "Anos Exp" },
             { number: "20+", label: "Tecnologias" },
             { number: "10+", label: "VR Apps" },
