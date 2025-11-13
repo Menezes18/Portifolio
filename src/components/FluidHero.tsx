@@ -285,10 +285,7 @@ const FluidHero = ({ toggleSidebar }: FluidHeroProps) => {
       autoAnimTime = 0;
       idleTime = 0;
       
-      if (event.touches.length > 0) {
-        event.preventDefault();
-      }
-
+      // Don't prevent default - allow scrolling
       const canvasRect = canvas.getBoundingClientRect();
       const touchX = event.touches[0].clientX;
       const touchY = event.touches[0].clientY;
@@ -299,6 +296,7 @@ const FluidHero = ({ toggleSidebar }: FluidHeroProps) => {
         touchY >= canvasRect.top &&
         touchY <= canvasRect.bottom
       ) {
+        // Only interact with fluid if touch is on canvas
         prevMouse.copy(mouse);
 
         mouse.x = (touchX - canvasRect.left) / canvasRect.width;
